@@ -9,8 +9,8 @@ import java.io.*;
 public class CrackMyBase
 {
 
-    public CrackMyBase()
-            throws IOException, FileNotFoundException
+    private CrackMyBase()
+            throws IOException
     {
         long time = System.currentTimeMillis() / (long)1000;
         RandomAccessFile configFile = new RandomAccessFile("C:\\Users\\ericmo\\AppData\\Local\\wjjsoft\\nyfedit7\\myBase.ini"
@@ -20,20 +20,20 @@ public class CrackMyBase
             String line;
             if ((line = configFile.readLine()) == null)
                 break;
-            if (line.indexOf("App.UserLic.FirstUseOn") == -1)
+            if (!line.contains("App.UserLic.FirstUseOn"))
                 continue;
             configFile.seek(configFile.getFilePointer() - (long)12);
             System.out.println("Success");
             configFile.writeBytes("" + time);
             break;
         } while (true);
-        System.out.println("-----------------Finished-----------123---445--");
+        System.out.println("-----------------Finished-----------123---445-789-");
 
         configFile.close();
     }
 
     public static void main(String args[])
-            throws IOException, FileNotFoundException
+            throws IOException
     {
         System.out.println("-----------------Begin------------------");
 
