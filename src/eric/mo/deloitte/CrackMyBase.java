@@ -27,7 +27,7 @@ public class CrackMyBase
             configFile.writeBytes("" + time);
             break;
         } while (true);
-        System.out.println("-----------------Finished-----------123-------");
+        System.out.println("-----------------Finished-----------123---445--");
 
         configFile.close();
     }
