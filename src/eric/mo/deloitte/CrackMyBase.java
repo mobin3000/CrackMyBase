@@ -35,7 +35,7 @@ public class CrackMyBase
     public static void main(String args[])
             throws IOException
     {
-        System.out.println("-----------------Begin------------------");
+        System.out.println("-----------------Begin---------000---------");
 
         CrackMyBase crackMyBase = new CrackMyBase();
     }
